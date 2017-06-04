@@ -1,0 +1,58 @@
+
+ <div id="adminCandidato" class="container-fluid">
+
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-default" style="background-color: #d6ccff ">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapse" data-target="#navbar-1">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div id="menu">
+              <ul>
+              <a href="../index.html" class="navbar-brand">VooTweet</a>
+              <li><a href="/#!/admin/partido"> <i class="fa fa-flag" aria-hidden="true"></i>Partidos Politicos </a></li>
+                <li><a href="/#!/admin/usuario"><i class="fa fa-user" aria-hidden="true"></i>Usuarios</a></li>
+                <li><a href="/#!/admin/candidato"><i class="fa fa-life-ring" aria-hidden="true"></i> Candidatos Presidenciales </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+  </div>
+
+
+    <div class="row"  style="border: 1pt solid #fbb; text-align: center;">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+
+        <table class=" table tabler-hover tablaUsuario" align="left" id="table" width=30% style="float:left;">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+          </tr>
+          <tr>
+            <form>
+              <td ><input type="text" ng-model="Modelpdto_nombre"></td>
+              <td ><input type="text" ng-model="Modelpdto_Descripcion"></td>
+              <td ><input ng-click="add()" type="submit" value="Nuevo" class="btn btn-primary" style='width:70px; height:25px'></td>
+            </form>
+          </tr>
+          
+            <tr ng-repeat="pdto in partidos">
+            <td >{{pdto.pdto_nombre}}</td>
+            <td >{{pdto.pdto_Descripcion}}</td>
+            
+            <td ><input ng-click="delete($index)" type="text" name="Eliminar" class="btn btn-danger" value="Borrar" style='width:70px; height:25px' ></td>
+          </tr> 
+        </table>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>

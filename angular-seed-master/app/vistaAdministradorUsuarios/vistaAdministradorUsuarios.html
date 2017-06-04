@@ -1,0 +1,83 @@
+
+
+	<div id="adminUsuario" class="container-fluid">
+
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default" style="background-color: #d6ccff ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapse" data-target="#navbar-1">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<div id="menu">
+							<ul>
+							<a href="../index.html" class="navbar-brand">VooTweet</a>
+							<li><a href="/#!/admin/partido"> <i class="fa fa-flag" aria-hidden="true"></i>Partidos Politicos </a></li>
+								<li><a href="/#!/admin/usuario"><i class="fa fa-user" aria-hidden="true"></i>Usuarios</a></li>
+								<li><a href="/#!/admin/candidato"><i class="fa fa-life-ring" aria-hidden="true"></i> Candidatos Presidenciales </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</nav>
+		</header>
+	</div>
+
+
+		<div class="row"  style="border: 1pt solid #fbb; text-align: center;">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+
+				<table class=" table tabler-hover tablaUsuario" align="left" id="table" width=30% style="float:left;">
+					<tr>
+						<th>Candidato</th>
+						<th>Privilegios</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Email</th>
+						<th>Password</th>
+
+					</tr>
+					<tr>
+						<form>
+							<td ><select ng-options="candidato.cdto_id as candidato.cdto_nombre for candidato in candidatos" ng-model="Modelcdto_id"></select></td>
+
+							<td ><select ng-options="privilegio.id as privilegio.nombre for privilegio in privilegios" ng-model="Modelusr_privilegio"></select></td>
+							
+
+
+							<td ><input type="text" ng-model="Modelusr_nombre"></td>
+							<td ><input type="text" ng-model="Modelusr_apellido"></td>
+							<td ><input type="text" ng-model="Modelusr_correo"></td>
+							<td ><input type="text" ng-model="Modelusr_password"></td>
+							<td ><input ng-click="add()" type="submit" value="Nuevo" class="btn btn-primary" style='width:70px; height:25px'></td>
+						</form>
+					</tr>
+					<tr ng-repeat="usuario in usuarios">
+						<td ng-if="usuario.cdto_id  == 1">Felipe Kast</td>
+						<td ng-if="usuario.cdto_id  == 2">Jose Ossandon</td>
+						<td ng-if="usuario.cdto_id  == 3">Sebastian Piñera</td>
+						<td ng-if="usuario.cdto_id  == 4">Beatriz Sanchez</td>
+						<td ng-if="usuario.cdto_id  == 5">Alejandro Guiller</td>
+						<td ng-if="usuario.cdto_id  == 6">Carolina Goic</td>
+
+						<td ng-if="usuario.usr_privilegio == 0">Usuario</td>
+						<td ng-if="usuario.usr_privilegio == 1">Admin</td>
+						<td >{{usuario.usr_nombre}}</td>
+						<td >{{usuario.usr_apellido}}</td>
+						<td >{{usuario.usr_correo}}</td>
+						<td >{{usuario.usr_password}}</td>
+						<td ><input ng-click="delete($index)" type="text" name="Eliminar" class="btn btn-danger" value="Borrar" style='width:70px; height:25px' ></td>
+					</tr>	
+				</table>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+
+

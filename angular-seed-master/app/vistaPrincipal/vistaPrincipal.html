@@ -1,0 +1,54 @@
+	<div class="container-fluid">
+
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default" style="background-color: #d6ccff ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapse" data-target="#navbar-1">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<div id="menu">
+							<ul>
+							<a href="../index.html" class="navbar-brand">VooTweet</a>
+								<li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>Que es Omnipotweet </a></li>
+								<li><a href=""><i class="fa fa-question" aria-hidden="true"></i>Ayuda</a></li>
+								<li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Referencias </a></li>
+								<li><a href=""><i class="fa fa-power-off" aria-hidden="true"></i>Cerrar sesion </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</nav>
+		</header>
+	</div>
+
+	<div id="contenedor" ng-repeat="candidato in candidatos" align="left" height="450" width="350" >
+		<ul>
+			<font color="white"><h1>{{candidato.cdto_nombre}}</h1></font>
+			<li>
+				<a title="{{candidato.cdto_nombre}}"" href="vistaAprobacion.html">
+				<p>
+					<img src="{{candidato.cdto_imagen}}" alt="Los Tejos"  height="350" width="250"  />
+					<font color="white"><br>			
+						Nombre :{{candidato.cdto_nombre}}<br>
+						Cuenta Oficial:{{candidato.cdto_cuenta_twitter}}<br>
+						Fecha Nacimiento:{{candidato.cdto_fecha_nacimiento}}<br>
+						Edad: {{candidato.cdto_edad}}<br>
+					</font>
+				</p>
+				</a>
+
+
+			</li>
+
+		</ul>
+
+	</div>
+
+	</div>
+

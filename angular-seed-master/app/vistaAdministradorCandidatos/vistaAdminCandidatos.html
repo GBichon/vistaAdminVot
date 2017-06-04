@@ -1,0 +1,85 @@
+
+ <div id="adminCandidato" class="container-fluid">
+
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-default" style="background-color: #d6ccff ">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapse" data-target="#navbar-1">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div id="menu">
+              <ul>
+              <a href="../index.html" class="navbar-brand">VooTweet</a>
+              <li><a href="/#!/admin/partido"> <i class="fa fa-flag" aria-hidden="true"></i>Partidos Politicos </a></li>
+                <li><a href="/#!/admin/usuario"><i class="fa fa-user" aria-hidden="true"></i>Usuarios</a></li>
+                <li><a href="/#!/admin/candidato"><i class="fa fa-life-ring" aria-hidden="true"></i> Candidatos Presidenciales </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+  </div>
+
+
+    <div  class="row"  style="border: 1pt solid #fbb; text-align: center;">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+
+        <table class=" table tabler-hover tablaUsuario" align="left" id="table" width=30% style="float:left;">
+          <tr>
+            <th>Partido</th>
+            <th>Nombre</th>
+            <th>Twitter</th>
+            <th>Fecha Nacimiento</th>
+            <th>Edad</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+            <th>Actividad</th>
+          </tr>
+          <tr>
+            <form>
+              <td ><select ng-options="partido.pdto_id as partido.pdto_nombre for partido in partidos" ng-model="Modelpdto_id"></select></td>
+
+              <td ><input type="text" ng-model="Modelcdto_nombre"></td> 
+              <td ><input type="text" ng-model="Modelcdto_cuenta_twitter"></td>
+              <td ><input type="text" ng-model="Modelcdto_fecha_nacimiento"></td>
+              <td ><input type="text" ng-model="Modelcdto_edad"></td>
+              <td ><input type="text" ng-model="Modelcdto_descripcion"></td>
+              <td ><input type="text" ng-model="Modelcdto_imagen"></td>
+              <td ><select ng-options="a.id as a.nombre for a in actividad" ng-model="Modelcdto_activo"></select></td>
+              
+              <td ><input ng-click="add()" type="submit" value="Nuevo" class="btn btn-primary" style='width:70px; height:25px'></td>
+            </form>
+          </tr>
+          
+            <tr ng-repeat="candidato in candidatos">
+            <td ng-if="candidato.pdto_id  == 1">Evopoli</td>
+            <td ng-if="candidato.pdto_id  == 2">Independiente</td>
+            <td ng-if="candidato.pdto_id  == 3">RN</td>
+            <td ng-if="candidato.pdto_id  == 4">FR</td>
+            <td ng-if="candidato.pdto_id  == 5">PS</td>
+            <td ng-if="candidato.pdto_id  == 6">PDC</td>
+
+            <td >{{candidato.cdto_nombre}}</td>
+            <td >{{candidato.cdto_cuenta_twitter}}</td>
+            <td >{{candidato.cdto_fecha_nacimiento}}</td>
+            <td >{{candidato.cdto_edad}}</td>
+            <td >{{candidato.cdto_descripcion}}</td>
+            <td >{{candidato.cdto_imagen}}</td>
+            <td ng-if="candidato.cdto_activo == 0">Inactivo</td>
+            <td ng-if="candidato.cdto_activo == 1">Activo</td>
+
+            <td ><input ng-click="delete($index)" type="text" name="Eliminar" class="btn btn-danger" value="Borrar" style='width:70px; height:25px' ></td>
+          </tr> 
+        </table>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>

@@ -1,0 +1,87 @@
+/*body{
+	background-image: url(../img/fondo3.jpg) ;
+	background-attachment: fixed;
+}*/
+
+body #adminUsuario{
+background-image: url("http://www.cromalite.com/sites/default/files/styles/marca_node/public/20110617095931_la9050.jpg?itok=J_3iWAvu") ;
+
+}
+body #adminCandidato{
+background-image: url("http://www.cromalite.com/sites/default/files/styles/marca_node/public/20110617095931_la9050.jpg?itok=J_3iWAvu") ;
+
+}
+
+ table{
+	width:50%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+
+#menu li {
+	/* Indicamos que la posición de 'li' sea adjunte siempre a la izquierda */
+	float: left;
+	/* Eliminamos las marcas que genera el li como pueden ser las redonadas o recuadros */
+	list-style-type: none;
+}
+
+/* Por defecto ul genera una separación hacia la derecha. con margin:0 queda anulada */
+#menu ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;;
+}
+
+#menu a {
+	text-decoration: none;
+	padding: 3px 10px 3px 10px;
+	text-align: center;
+}
+
+#menu a:hover {
+	background: #d6ccff;
+	border-radius: 50px;
+}
+
+#contenedor{
+	background-image: url(../img/image.jpg) ;
+	background-attachment: fixed;
+	padding: 20px;
+	margin: 100px auto;
+	width: 600px;
+}
+
+#contenedor ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;;
+}
+
+#contenedor a {
+	text-decoration: none;
+	padding: 3px 10px 3px 10px;
+	text-align: center;
+}
+
+#contenedor a:hover {
+	background: #ffffff;
+	border-radius: 50px;
+}
+
+
+table.tablaUsuario {
+	width:100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+
+
+
