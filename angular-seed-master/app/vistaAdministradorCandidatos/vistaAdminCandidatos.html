@@ -45,36 +45,36 @@
           </tr>
           <tr>
             <form>
-              <td ><select ng-options="partido.pdto_id as partido.pdto_nombre for partido in partidos" ng-model="Modelpdto_id"></select></td>
+              <td ><select ng-options="partido.pdtoId as partido.pdtoNombre for partido in partidos" ng-model="ModelpdtoId"></select></td>
 
-              <td ><input type="text" ng-model="Modelcdto_nombre"></td> 
-              <td ><input type="text" ng-model="Modelcdto_cuenta_twitter"></td>
-              <td ><input type="text" ng-model="Modelcdto_fecha_nacimiento"></td>
-              <td ><input type="text" ng-model="Modelcdto_edad"></td>
-              <td ><input type="text" ng-model="Modelcdto_descripcion"></td>
-              <td ><input type="text" ng-model="Modelcdto_imagen"></td>
-              <td ><select ng-options="a.id as a.nombre for a in actividad" ng-model="Modelcdto_activo"></select></td>
+              <td ><input type="text" ng-model="ModelcdtoNombre"></td> 
+              <td ><input type="text" ng-model="ModelcdtoCuentaTwitter"></td>
+              <td ><input type="text" ng-model="ModelcdtoFechaNacimiento"></td>
+              <td ><input type="text" ng-model="ModelcdtoEdad"></td>
+              <td ><input type="text" ng-model="ModelcdtoDescripcion"></td>
+              <td ><input type="text" ng-model="ModelcdtoImagen"></td>
+              <td ><select ng-options="a.id as a.nombre for a in actividad" ng-model="ModelcdtoActivo"></select></td>
               
               <td ><input ng-click="add()" type="submit" value="Nuevo" class="btn btn-primary" style='width:70px; height:25px'></td>
             </form>
           </tr>
           
             <tr ng-repeat="candidato in candidatos">
-            <td ng-if="candidato.pdto_id  == 1">Evopoli</td>
-            <td ng-if="candidato.pdto_id  == 2">Independiente</td>
-            <td ng-if="candidato.pdto_id  == 3">RN</td>
-            <td ng-if="candidato.pdto_id  == 4">FR</td>
-            <td ng-if="candidato.pdto_id  == 5">PS</td>
-            <td ng-if="candidato.pdto_id  == 6">PDC</td>
+            <td ng-if="candidato.pdtoId  == 1">Evopoli</td>
+            <td ng-if="candidato.pdtoId  == 2">Independiente</td>
+            <td ng-if="candidato.pdtoId  == 3">RN</td>
+            <td ng-if="candidato.pdtoId  == 4">FR</td>
+            <td ng-if="candidato.pdtoId  == 5">PS</td>
+            <td ng-if="candidato.pdtoId  == 6">PDC</td>
 
-            <td >{{candidato.cdto_nombre}}</td>
-            <td >{{candidato.cdto_cuenta_twitter}}</td>
-            <td >{{candidato.cdto_fecha_nacimiento}}</td>
-            <td >{{candidato.cdto_edad}}</td>
-            <td >{{candidato.cdto_descripcion}}</td>
-            <td >{{candidato.cdto_imagen}}</td>
-            <td ng-if="candidato.cdto_activo == 0">Inactivo</td>
-            <td ng-if="candidato.cdto_activo == 1">Activo</td>
+            <td >{{candidato.cdtoNombre}}</td>
+            <td >{{candidato.cdtoCuentaTwitter}}</td>
+            <td >{{candidato.cdtoFechaNacimiento}}</td>
+            <td >{{candidato.cdtoEdad}}</td>
+            <td >{{candidato.cdtoDescripcion}}</td>
+            <td >{{candidato.cdtoImagen}}</td>
+            <td ng-if="candidato.cdtoActivo == false">Inactivo</td>
+            <td ng-if="candidato.cdtoActivo == true">Activo</td>
 
             <td ><input ng-click="delete($index)" type="text" name="Eliminar" class="btn btn-danger" value="Borrar" style='width:70px; height:25px' ></td>
           </tr> 

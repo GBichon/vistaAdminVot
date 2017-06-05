@@ -10,10 +10,10 @@ app.controller('vistaAdministradorPartidosCtrl',function ($scope, servPartidos) 
 
     console.log("ADD");
     var nuevoPartido={
-      "pdto_nombre":$scope.Modelpdto_nombre,
-      "pdto_id": $scope.Modelpdto_id,
-      "pdto_logo": $scope.Modelpdto_logo,
-      "pdto_Descripcion": $scope.Modelpdto_Descripcion,
+      "pdtoNombre":$scope.ModelpdtoNombre,
+      "pdtoId": $scope.ModelpdtoId,
+      "pdtoLogo": $scope.ModelpdtoLogo,
+      "pdtoDescripcion": $scope.ModelpdtoDescripcion,
     };
 
     
@@ -22,15 +22,15 @@ app.controller('vistaAdministradorPartidosCtrl',function ($scope, servPartidos) 
     //SE DEBE REEMPLAZAR LA LINEA 22 Y 33 POR EL COMENTARIO CUANDO ESTE LISTO EL SERVICIO
     servPartidos.addPartido(nuevoPartido);
     $scope.partidos.push(nuevoPartido); //   $scope.partidos=  servPartidos.getPartidos(); // COlOCAR ESTO CUANDO FUNQUE EL SERVICIO
-    $scope.Modelpdto_nombre='';
-    $scope.Modelpdto_id='';
-    $scope.Modelpdto_logo='';
-    $scope.Modelpdto_Descripcion='';
+    $scope.ModelpdtoNombre='';
+    $scope.ModelpdtoId='';
+    $scope.ModelpdtoLogo='';
+    $scope.ModelpdtoDescripcion='';
   };
 
   $scope.delete=function (index){
      console.log("DELETE");
-      servPartidos.deletePartido($scope.partidos[index].usr_id);
+      servPartidos.deletePartido($scope.partidos[index].pdtoId);
       $scope.partidos.splice(index,1); //   $scope.partidos=  servPartidos.getPartidos(); // COlOCAR ESTO CUANDO FUNQUE EL SERVICIO
   };
 

@@ -4,40 +4,40 @@ app.service('servPartidos', function($http){
 
         var _debugPartidos = [
     {
-      "pdto_id": "1",
-      "pdto_nombre": "Evopoli",
-      "pdto_logo": "https://pbs.twimg.com/profile_images/818478460934955009/qsNXmwAu.jpg",
-      "pdto_Descripcion": "Evolucion politica"
+      "pdtoId": 1,
+      "pdtoNombre": "Evopoli",
+      "pdtoLogo": "https://pbs.twimg.com/profile_images/818478460934955009/qsNXmwAu.jpg",
+      "pdtoDescripcion": "Evolucion politica"
     },
     {
-      "pdto_id": "2",
-      "pdto_nombre": "Independiente",
-      "pdto_logo": "http://www.contactox.net/images/big/20150529/2803445.jpg",
-      "pdto_Descripcion": "Independiente"
+      "pdtoId": 2,
+      "pdtoNombre": "Independiente",
+      "pdtoLogo": "http://www.contactox.net/images/big/20150529/2803445.jpg",
+      "pdtoDescripcion": "Independiente"
     },
     {
-      "pdto_id": "3",
-      "pdto_nombre": "RN",
-      "pdto_logo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
-      "pdto_Descripcion": "Renovacion Nacional"
+      "pdtoId": 3,
+      "pdtoNombre": "RN",
+      "pdtoLogo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
+      "pdtoDescripcion": "Renovacion Nacional"
     },
     {
-      "pdto_id": "4",
-      "pdto_nombre": "FR",
-      "pdto_logo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
-      "pdto_Descripcion": "Frente Amplio"
+      "pdtoId": 4,
+      "pdtoNombre": "FR",
+      "pdtoLogo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
+      "pdtoDescripcion": "Frente Amplio"
     },
     {
-      "pdto_id": "5",
-      "pdto_nombre": "PS",
-      "pdto_logo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
-      "pdto_Descripcion": "Partido Socialista"
+      "pdtoId": 5,
+      "pdtoNombre": "PS",
+      "pdtoLogo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
+      "pdtoDescripcion": "Partido Socialista"
     },
         {
-      "pdto_id": "6",
-      "pdto_nombre": "PDC",
-      "pdto_logo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
-      "pdto_Descripcion": "Partido Democrata Cristiano"
+      "pdtoId": 6,
+      "pdtoNombre": "PDC",
+      "pdtoLogo": "http://www.diarioelranco.cl/wp-content/uploads/2014/12/Renovacion_Nacional_2005.png",
+      "pdtoDescripcion": "Partido Democrata Cristiano"
     }
   ];
 

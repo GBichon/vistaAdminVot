@@ -8,38 +8,40 @@ app.controller('vistaAdministradorCandidatosCtrl',function ($scope, servCandidat
   $scope.partidos=  servPartidos.getPartidos();
 
   $scope.add=function () {
+
+    console.log("ADD Que sucede");
     var nuevoCandidato={
-      "pdto_id": $scope.Modelpdto_id,
-      "cdto_nombre":$scope.Modelcdto_nombre,
-      "cdto_cuenta_twitter": $scope.Modelcdto_cuenta_twitter,
-      "cdto_fecha_nacimiento": $scope.Modelcdto_fecha_nacimiento,
-      "cdto_edad":$scope.Modelcdto_edad,
-      "cdto_descripcion":$scope.Modelcdto_descripcion,
-      "cdto_imagen": $scope.Modelcdto_imagen,
-      "cdto_activo": $scope.Modelcdto_activo
+      "pdtoId": $scope.ModelpdtoId,
+      "cdtoNombre":$scope.ModelcdtoNombre,
+      "cdtoCuentaTwitter": $scope.ModelcdtoCuentaTwitter,
+      "cdtoFechaNacimiento": $scope.ModelcdtoFechaNacimiento,
+      "cdtoEdad":$scope.ModelcdtoEdad,
+      "cdtoDescripcion":$scope.ModelcdtoDescripcion,
+      "cdtoImagen": $scope.ModelcdtoImagen,
+      "cdtoActivo": $scope.ModelcdtoActivo
     };
 
     //SE DEBE REEMPLAZAR LA LINEA 22 Y 33 POR EL COMENTARIO CUANDO ESTE LISTO EL SERVICIO
     servCandidatos.addCandidato(nuevoCandidato);
-    $scope.Modelpdto_id='';
+    $scope.ModelpdtoId='';
     $scope.candidatos.push(nuevoCandidato); //   $scope.candidatos=  servCandidatos.getCandidatos(); // COlOCAR ESTO CUANDO FUNQUE EL SERVICIO
-    $scope.Modelcdto_nombre='';
-    $scope.Modelcdto_cuenta_twitter='';
-    $scope.Modelcdto_fecha_nacimiento='';
-    $scope.Modelcdto_edad='';
-    $scope.Modelcdto_imagen='';
-    $scope.Modelcdto_activo='';     
+    $scope.ModelcdtoNombre='';
+    $scope.ModelcdtoCuentaTwitter='';
+    $scope.ModelcdtoFechaNacimiento='';
+    $scope.ModelcdtoEdad='';
+    $scope.ModelcdtoImagen='';
+    $scope.ModelcdtoActivo='';     
   };
 
   $scope.delete=function (index){
      console.log("DELETE");
-      servCandidatos.deleteCandidato($scope.candidatos[index].usr_id);
+      servCandidatos.deleteCandidato($scope.candidatos[index].cdtoId);
       $scope.candidatos.splice(index,1); //   $scope.candidatos=  servCandidatos.getCandidatos(); // COlOCAR ESTO CUANDO FUNQUE EL SERVICIO
   };
 
   $scope.actividad = [
-    {nombre : "inactivo", id : "0"},
-    {nombre : "activo", id: "1"}
+    {nombre : "inactivo", id : 0},
+    {nombre : "activo", id: 1}
     ]
 
 });

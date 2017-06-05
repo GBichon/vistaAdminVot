@@ -4,64 +4,64 @@ app.service('servCandidatos', function($http){
 
         var _debugCandidatos = [
     {
-      "cdto_id": "1",
-      "pdto_id": "1",
-      "cdto_nombre": "Felipe Kast",
-      "cdto_cuenta_twitter": "@felipekast",
-      "cdto_fecha_nacimiento": "09/06/1977",
-      "cdto_edad": "39",
-      "cdto_imagen": "http://vignette4.wikia.nocookie.net/althistory/images/b/b0/Felipe_Kast.jpg/revision/latest?cb=20150402072336&path-prefix=es",
-      "cdto_activo": "1"
+      "cdtoId": 1,
+      "pdtoId": 1,
+      "cdtoNombre": "Felipe Kast",
+      "cdtoCuentaTwitter": "@felipekast",
+      "cdtoFechaNacimiento": "09/06/1977",
+      "cdtoEdad": "39",
+      "cdtoImagen": "http://vignette4.wikia.nocookie.net/althistory/images/b/b0/Felipe_Kast.jpg/revision/latest?cb=20150402072336&path-prefix=es",
+      "cdtoActivo": true
     },
     {
-      "cdto_id": "2",
-      "pdto_id": "2",
-      "cdto_nombre": "Jose Ossandon",
-      "cdto_cuenta_twitter": "@mjossandon",
-      "cdto_fecha_nacimiento": "24/08/1962",
-      "cdto_edad": "54",
-      "cdto_imagen": "http://www.nuevopoder.cl/nuevo_sitio/wp-content/uploads/2016/06/Ossandon-Manuel-Jose-La-Naci%C3%B3n.jpg",
-      "cdto_activo": "1"
+      "cdtoId": 2,
+      "pdtoId": 2,
+      "cdtoNombre": "Jose Ossandon",
+      "cdtoCuentaTwitter": "@mjossandon",
+      "cdtoFechaNacimiento": "24/08/1962",
+      "cdtoEdad": "54",
+      "cdtoImagen": "http://www.nuevopoder.cl/nuevo_sitio/wp-content/uploads/2016/06/Ossandon-Manuel-Jose-La-Naci%C3%B3n.jpg",
+      "cdtoActivo": true
     },
     {
-      "cdto_id": "3",
-      "pdto_id": "3",
-      "cdto_nombre": "Sebastian Piñera",
-      "cdto_cuenta_twitter": "@sebastinapinera",
-      "cdto_fecha_nacimiento": "01/12/1949",
-      "cdto_edad": "67",
-      "cdto_imagen": "https://upload.wikimedia.org/wikipedia/commons/4/49/Sebastian_Pinera.JPG",
-      "cdto_activo": "1"
+      "cdtoId": 3,
+      "pdtoId": 3,
+      "cdtoNombre": "Sebastian Piñera",
+      "cdtoCuentaTwitter": "@sebastinapinera",
+      "cdtoFechaNacimiento": "01/12/1949",
+      "cdtoEdad": "67",
+      "cdtoImagen": "https://upload.wikimedia.org/wikipedia/commons/4/49/Sebastian_Pinera.JPG",
+      "cdtoActivo": true
     },
     {
-      "cdto_id": "4",
-      "pdto_id": "4",
-      "cdto_nombre": "Beatriz Sanchez",
-      "cdto_cuenta_twitter": "@labeasanchez",
-      "cdto_fecha_nacimiento": "24/12/1970",
-      "cdto_edad": "46",
-      "cdto_imagen": "http://www.diarioantofagasta.cl/wp-content/uploads/2017/04/beatrizsanchez.jpg",
-      "cdto_activo": "1"
+      "cdtoId": 4,
+      "pdtoId": 4,
+      "cdtoNombre": "Beatriz Sanchez",
+      "cdtoCuentaTwitter": "@labeasanchez",
+      "cdtoFechaNacimiento": "24/12/1970",
+      "cdtoEdad": "46",
+      "cdtoImagen": "http://www.diarioantofagasta.cl/wp-content/uploads/2017/04/beatrizsanchez.jpg",
+      "cdtoActivo": true
     },
     {
-      "cdto_id": "5",
-      "pdto_id": "5",
-      "cdto_nombre": "Alejandro Guiller",
-      "cdto_cuenta_twitter": "@aleguiller",
-      "cdto_fecha_nacimiento": "05/03/1953",
-      "cdto_edad": "64",
-      "cdto_imagen": "http://radio.uchile.cl/wp-content/uploads/2016/08/alejandro-guillier.jpg",
-      "cdto_activo": "1"
+      "cdtoId": 5,
+      "pdtoId": 5,
+      "cdtoNombre": "Alejandro Guiller",
+      "cdtoCuentaTwitter": "@aleguiller",
+      "cdtoFechaNacimiento": "05/03/1953",
+      "cdtoEdad": "64",
+      "cdtoImagen": "http://radio.uchile.cl/wp-content/uploads/2016/08/alejandro-guillier.jpg",
+      "cdtoActivo": true
     },
     {
-      "cdto_id": "6",
-      "pdto_id": "6",
-      "cdto_nombre": "Carolina Goinc",
-      "cdto_cuenta_twitter": "@carolinagoic",
-      "cdto_fecha_nacimiento": "20/12/1972",
-      "cdto_edad": "44",
-      "cdto_imagen": "http://3.bp.blogspot.com/-AyVS1TWSll4/Tl7D4cBjMxI/AAAAAAAAHEc/wp8WJXyIcow/s1600/DSC_4182_ok.jpg",
-      "cdto_activo": "1"
+      "cdtoId": 6,
+      "pdtoId": 6,
+      "cdtoNombre": "Carolina Goinc",
+      "cdtoCuentaTwitter": "@carolinagoic",
+      "cdtoFechaNacimiento": "20/12/1972",
+      "cdtoEdad": "44",
+      "cdtoImagen": "http://3.bp.blogspot.com/-AyVS1TWSll4/Tl7D4cBjMxI/AAAAAAAAHEc/wp8WJXyIcow/s1600/DSC_4182_ok.jpg",
+      "cdtoActivo": true
     }
   ];
 
